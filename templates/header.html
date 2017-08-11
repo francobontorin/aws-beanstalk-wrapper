@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AWS Elastic Beanstalk Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<style>
+h2 {
+    text-align: center;
+}
+</style>
+
+</head>
+
+<header>
+
+<h2> AWS Elastic Beanstalk API Demo </h2>
+
+    <div class = "container-fluid">
+        <a class="navbar-brand" href="/">
+            <img style="max-width:180px; margin-top: -80px; align=left;" src="{{ url_for('static', filename='images/aws_web_services.png') }}">
+        <a/>
+
+	    <div class="navbar-right">
+	        <a class="navbar-brand" href="http://chc.ca/" target="_blank">
+	            <img style="max-width:80px; margin-top: -50px; margin-right: 30px; align=right" src="{{ url_for('static', filename='images/1200px-CHC_Heli.png') }}">
+	        <a/>
+	    </div>
+
+	</div>
+	
+</header>
+
+<body>
+
+    <div class="border-row" style="width:100%; margin-bottom: 10px"></div>
+
+    <div class="container-fluid" style="min-height:100%; width 80%">
+
+	{% block body %} {% endblock %}
+
+	<br>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+        {% for message in messages %}
+            {% if "Error" not in message[1]: %}
+                <div class="alert alert-info">
+                <strong>Success! </strong> {{ message[1] }}
+                </div>
+            {% endif %}
+
+            {% if "Error" in message[1]: %}
+                <div class="alert alert-warning">
+                {{ message[1] }}
+                </div>
+            {% endif %}
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    </div>
+
+</body>
+
+</html>

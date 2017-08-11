@@ -1,0 +1,41 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<div class="container">
+<form  action="" method="post" role="form" enctype="multipart/form-data">
+  <h3>Confirmation</h3>
+  <p>Confirm the information provided below before submit:</p>            
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Application Name</td>
+        <td>{{app_name}}</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>{{description}}</td>
+      </tr>
+      <tr>
+        <td>Version</td>
+        <td>{{app_version}}</td>
+      </tr>
+      <tr>
+        <td>Platform</td>
+        <td>{{platform}}</td>
+      </tr>
+      <tr>
+        <td>Source Code</td>
+        <td>{{file}}</td>
+      </tr>
+    </tbody>
+  </table>
+<a href="/deploy/"><button type="deploy" class="btn btn-success" aria-label="Center Align" style="margin-top: 10px; margin-bottom: 10px; height: 40px; width: 120px; margin-right: 50px">
+<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Submit
+</button></a>
+</div>
+</form>
+
+
+
+{% endblock %}

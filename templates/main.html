@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<h3> Application Details </h3>
+<br>
+<form  action="" method="post" role="form" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+	<div class="form-group" style="width:40%">
+	    <label for="app_name">Application Name</label>
+            <input type="text" class="form-control" id="app_name" name="app_name" placeholder="Maximum length of 100 characters, not including forward slash">
+    </div><br>
+
+    <div class="form-group" style="width:40%">
+        <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="Maximum length of 200 characters">
+    </div><br>
+
+    <div class="form-group" style="width:10%">
+        <label for="app_version">Version</label>
+            <input type="text" class="form-control" id="app_version" name="app_version" placeholder="Version label">
+    </div><br>
+
+    <div class="form-group" style="width:35%">
+        <label for="bundle_file">Application Code</label>
+            <input type="file" name="file">
+            <p class="help-block">Upload a source bundle from your computer</p>
+    </div><br>
+
+    <div class="form-group" style="width:35%">
+        <label for="platform">Platform</label><br>
+        <select name="platform">
+            <option>Java</option>
+            <option>Node.js</option>
+            <option>PHP</option>
+            <option>Python</option>
+        </select>
+
+    </div><br>
+
+	<button type="submit"  class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; height: 40px; width: 120px; margin-right: 50px">Next</button>
+    </form>
+
+{% endblock %}
