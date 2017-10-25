@@ -9,7 +9,7 @@ By using the AWS Python SDK (https://boto3.readthedocs.io/en/latest/) and a Pyth
 
 # Architecture
 
-[[https://s3.amazonaws.com/bontorin/aws-eb-wrapper-arch.png|alt=Solution Architecture]]
+[[https://s3.amazonaws.com/bontorin/aws-eb-wrapper-arch.png]]
 
 
 # Author
