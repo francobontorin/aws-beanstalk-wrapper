@@ -13,7 +13,7 @@ By using the AWS Python SDK (https://boto3.readthedocs.io/en/latest/) and a Pyth
 
 # Author
 
-Franco Bontorin 
+Franco Bontorin - 
 Solutions Architect
 
 # License
